@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery图片弹幕插件----Luobata出品</title>
+		<link rel="stylesheet" type="text/css" href="./../css/reset.css">
+		<style type="text/css">
+			.page{
+				width: 293px;
+				overflow: hidden;
+				margin: 20px auto;
+				position: relative;
+			}
+			.barrages{
+				position: relative;
+				float: right;
+			}
+			.barrage {
+				position: relative;
+				float: right;
+				-webkit-animation-name:'barrage';/*动画属性名，也就是我们前面keyframes定义的动画名*/
+				-webkit-animation-duration: 10s;/*动画持续时间*/
+				-webkit-animation-timing-function: ease-in-out; /*动画频率，和transition-timing-function是一样的*/
+				/*-webkit-animation-delay: 2s;/*动画延迟时间*/
+				/*-webkit-animation-iteration-count: 10;/*定义循环资料，infinite为无限次*/
+				-webkit-animation-direction: alternate;/*定义动画方式*/
+				-moz-animation-timing-function: ease-in-out;
+				animation-name:barrage;
+				-moz-animation-duration: 15s;
+				-moz-animation-direction: alternate;
+				animation-duration: 15s;
+				animation-direction: alternate;
+				animation-timing-function: ease-in-out;
+			}
+			@-webkit-keyframes 'barrage' {
+				/*0% {
+					right: 0%;
+				}*/
+				100% {
+					left: -100%;
+					color: #656566;
+				}
+			}
+			@-moz-keyframes barrage {
+				/*0% {
+					right: 0%;
+				}*/
+				100% {
+					left: -100%;
+					color: #656566;
+				}
+			}
+			@keyframes barrage {
+				/*0% {
+					right: 0%;
+				}*/
+				100% {
+					left: -100%;
+					color: #656566;
+				}
+			}
+			p{
+				position: absolute;
+				height: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page">
+			<img src="./../img/1.jpg">
+		</div>
+
+		<script type="text/javascript" src="./../js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.luobata.barrage.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('img').barrage();
+			});
+		</script>
+	</body>
+</html>
